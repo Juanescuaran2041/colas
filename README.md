@@ -1,3 +1,7 @@
+## Caso de estudio
+
+Este proyecto simula el problema de backpressure en un sistema productor-consumidor: eventos entran a una cola de capacidad limitada a una tasa configurable mientras un consumidor los procesa a otra tasa, y cuando la cola se llena se aplica una estrategia (bloquear al productor, descartar eventos nuevos, descartar los más antiguos, o priorizar eventos críticos) que se puede ajustar en vivo para observar su efecto en la cola, las estadísticas y el registro de eventos. Es una aplicación real porque este mismo problema aparece en cualquier sistema donde un productor y un consumidor operan a velocidades distintas y hay que decidir qué pasa cuando el buffer se satura, como colas de mensajería (Kafka, RabbitMQ, SQS), streaming de eventos, APIs con rate limiting, procesamiento de logs o pipelines de datos.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
